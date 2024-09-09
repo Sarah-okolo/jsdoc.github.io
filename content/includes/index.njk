@@ -32,16 +32,6 @@
   {%- endif -%}
 {%- endmacro -%}
 
-{%- macro synonyms(item, tagType) -%}
-  {%- if item.data.synonyms -%}
-    {%- set comma = joiner(', ') -%}
-    (synonyms: {% for synonym in item.data.synonyms -%}
-      {{ comma() }}{{ formatTag(synonym, tagType) -}}
-    {%- endfor -%})
-  {%- endif -%}
-{%- endmacro -%}
-
-
 {%- block content -%}
     {% if title -%}
       <h1>{{ title }}</h1>
