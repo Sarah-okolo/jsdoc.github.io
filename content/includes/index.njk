@@ -33,35 +33,35 @@
 {%- endmacro -%}
 
 {%- block content -%}
-    {% if title -%}
-      <h1>{{ title }}</h1>
-    {%- endif %}
+  {% if title -%}
+    <h1>{{ title }}</h1>
+  {%- endif %}
 
-    {%- block synonyms -%}
-      {%- if synonyms | length -%}
-        <h2 id="synonyms">Synonyms</h2>
-        <ul>
-          {% for synonym in synonyms -%}
-            <li><code>{{ synonym }}</code></li>
-          {%- endfor %}
-        </ul>
-      {%- endif -%}
-    {%- endblock -%}
-      
-    {{ content | safe }}
-
-    {%- if related | length -%}
-      {%- set relatedLinks = related | relatedList(collections) -%}
-      <h2 id="related-links">Related links</h2>
+  {%- block synonyms -%}
+    {%- if synonyms | length -%}
+      <h2 id="synonyms">Synonyms</h2>
       <ul>
-        {%- for relatedLink in relatedLinks -%}
-          <li><a href="{{ relatedLink.path }}">{{ relatedLink.title }}</a></li>
-        {%- endfor -%}
+        {% for synonym in synonyms -%}
+          <li><code>{{ synonym }}</code></li>
+        {%- endfor %}
       </ul>
     {%- endif -%}
+  {%- endblock -%}
+    
+  {{ content | safe }}
 
-    <!-- Additional content, GitHub ribbon -->
-    <p>
-      <a href="https://github.com/jsdoc/jsdoc" class="github-ribbon">Fork me on<br>GitHub</a>
-    </p>
+  {%- if related | length -%}
+    {%- set relatedLinks = related | relatedList(collections) -%}
+    <h2 id="related-links">Related links</h2>
+    <ul>
+      {%- for relatedLink in relatedLinks -%}
+        <li><a href="{{ relatedLink.path }}">{{ relatedLink.title }}</a></li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <!-- Additional content, GitHub ribbon -->
+  <p>
+    <a href="https://github.com/jsdoc/jsdoc" class="github-ribbon">Fork me on<br>GitHub</a>
+  </p>
 {% endblock %}

@@ -5,7 +5,7 @@ layout: index.njk
 ---
 
 
-JSDoc 3 is an API documentation generator for JavaScript, similar to Javadoc or phpDocumentor. You
+JSDoc 3 is an API documentation generator for JavaScript, similar to [Javadoc](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html) or [phpDocumentor](https://www.phpdoc.org/). You
 add documentation comments directly to your source code, right alongside the code itself. The JSDoc
 tool will scan your source code and generate an HTML documentation website for you.
 

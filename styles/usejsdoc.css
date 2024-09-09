@@ -22,6 +22,8 @@ body {
     font-size: var(--F-size);
     color: var(--text-color);
     position: relative;
+    overflow-x: hidden;
+
 }
 
 header {
@@ -103,7 +105,8 @@ footer {
 }
 
 a {
-    color: var(--tomorrow-blue)
+    color: var(--tomorrow-blue);
+    text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
