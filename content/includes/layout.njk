@@ -35,20 +35,18 @@
     </header>
 
     <main class="main-secion">
-      {%- block synonyms -%}
-        {%- if synonyms | length -%}
-          <h2 id="synonyms">Synonyms</h2>
-          <ul>
-            {% for synonym in synonyms -%}
-              <li><code>{{ synonym }}</code></li>
-            {%- endfor %}
-          </ul>
-        {%- endif -%}
-      {%- endblock -%}
+      <nav class="nav-sidebar">
+      <ion-icon name="close-outline" id="closeMenuIcon"></ion-icon>
+      {%- for tocSection in toc -%}
+        {{ renderSection(tocSection) }}
+      {%- endfor -%}
+      </nav>
 
-      {%- block content -%}
-        <!-- Generated contents goes here-->
-      {%- endblock -%}
+      <article class="article-content">
+        {%- block content -%}
+          <!-- Generated article content goes here-->
+        {%- endblock -%}
+      </article>
     </main>
 
     <footer>

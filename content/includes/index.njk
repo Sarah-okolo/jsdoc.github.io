@@ -43,17 +43,20 @@
 
 
 {%- block content -%}
-  <nav class="nav-sidebar">
-    <ion-icon name="close-outline" id="closeMenuIcon"></ion-icon>
-    {%- for tocSection in toc -%}
-      {{ renderSection(tocSection) }}
-    {%- endfor -%}
-  </nav>
-
-  <article class="article-content">
     {% if title -%}
       <h1>{{ title }}</h1>
     {%- endif %}
+
+    {%- block synonyms -%}
+      {%- if synonyms | length -%}
+        <h2 id="synonyms">Synonyms</h2>
+        <ul>
+          {% for synonym in synonyms -%}
+            <li><code>{{ synonym }}</code></li>
+          {%- endfor %}
+        </ul>
+      {%- endif -%}
+    {%- endblock -%}
       
     {{ content | safe }}
 
@@ -71,5 +74,4 @@
     <p>
       <a href="https://github.com/jsdoc/jsdoc" class="github-ribbon">Fork me on<br>GitHub</a>
     </p>
-  </article>
 {% endblock %}
