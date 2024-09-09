@@ -1,6 +1,8 @@
 ---
+title: '@default'
 tag: default
 tags: blockTags
+layout: index.njk
 description: Document the default value.
 synonyms:
     - defaultvalue
