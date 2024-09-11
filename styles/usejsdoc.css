@@ -223,12 +223,13 @@ th {
     flex-wrap: nowrap;
     width: 100vw;
     max-width: 1500px;
+    margin: 0 auto;
 }
 
 /* Sidebar styling */
 .nav-sidebar {
-    min-width: 280px;
-    max-width: 280px;
+    min-width: 300px;
+    max-width: 300px;
     background-color: var(--bg-color);
     padding: 25px 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -288,7 +289,7 @@ th {
 
 
 /* Responsive design Mobile*/
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         --F-size: 12.5px;
         font-size: var(--F-size);
