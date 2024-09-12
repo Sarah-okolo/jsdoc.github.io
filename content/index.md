@@ -46,8 +46,7 @@ function Book(title, author) {
 ```
 :::
 
-More tags can be used to add more information. See the [home page][block-tags] for a complete list
-of tags that are recognized by JSDoc 3.
+More tags can be used to add more information.
 
 ::: example "Adding more information with tags"
 

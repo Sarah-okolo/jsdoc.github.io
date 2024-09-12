@@ -291,7 +291,7 @@ th {
 /* Responsive design Mobile*/
 @media screen and (max-width: 768px) {
     body {
-        --F-size: 12.5px;
+        --F-size: 13.5px;
         font-size: var(--F-size);
     }
 
@@ -301,14 +301,21 @@ th {
         align-items: center;
     }
 
+    .menu-wrapper{
+        margin-right: 55px;
+        position: relative;
+        top: 4px;
+    }
+
     #theme-toggle-btn {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
     
     #burger-menu{
-        font-size: 1.5em;
+        font-size: 1.3em;
         position: relative;
         bottom: 4px;
+        margin-left: 5px;
     }
 
     #burger-menu, #closeMenuIcon{
@@ -340,15 +347,15 @@ th {
     }
     
     figure pre code {
-        font-size: .87em;
-    }
-
-    code {
         font-size: .9em;
     }
 
+    code {
+        font-size: .95em;
+    }
+
     pre {
-        font-size: .85em;
+        font-size: .9em;
     }
 
     .nav-sidebar {
@@ -370,6 +377,11 @@ th {
 
     .article-content {
         width: 100%;
-        padding-right: 45px;
+        padding: 15px 25px 40px;
+    }
+
+    footer {
+        font-size: 0.7em;
+        line-height: 2;
     }
 }
